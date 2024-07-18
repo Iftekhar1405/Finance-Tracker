@@ -203,6 +203,7 @@ main{
     font-size: 16px;
     display: flex;
     align-items: center;
+    padding: 10px;
 }
 
 .sidebar ul li a span {
@@ -230,7 +231,9 @@ main{
 }
 .sidebar ul li a:hover {
     transform: scale(1.1);
-    color:rgb(54, 11, 163);
+    background-color:rgb(54, 11, 163);
+    color: white;
+    border-radius: 10px;
 }
 .sidebar:hover{
     transform: scale(1.1);
