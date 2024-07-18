@@ -317,3 +317,19 @@ tr td:nth-of-type(4){
 .head a:hover{
     font-weight:600;
 }
+.Success{
+    color: rgb(0, 206, 103);
+}
+.view-all{
+    color: wheat;
+    background-color: rgb(54, 11, 163) ;
+    height: 50px;
+    width: 100px;
+    border: 0;
+    border-radius: 50px;
+    transition: ease-in-out 0.3s;
+}
+.view-all:hover{
+    border-radius: 0;
+
+}
