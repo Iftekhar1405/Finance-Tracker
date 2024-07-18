@@ -18,6 +18,10 @@ main{
 .logo{
     width: 100px;
     border-radius: 20px;
+    transition: border-radius 0.3s;
+}
+.logo:hover{
+    border-radius: 0;
 }
 
 
