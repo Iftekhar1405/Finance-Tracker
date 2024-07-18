@@ -2,19 +2,24 @@
 * {
     font-family: "Inter Tight", sans-serif;
     box-sizing: border-box;
+    transition: transform 0.4s ease-in-out;
+}
+main{
+    margin-left: 280px;
 }
 
 .overview-container {
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-left: 90px;
 }
 
 
 .overview-card {
     display: flex;
     flex-direction: column;
-    padding: 1.7rem;
     background-color: white;
     border-radius: .8rem;
     min-width: 300px;
@@ -172,7 +177,7 @@
 .sidebar .general-title {
     margin-bottom: 10px;
     font-weight: bold;
-    color:black;
+    color:rgb(46, 46, 46);
 }
 
 .sidebar ul {
@@ -186,7 +191,7 @@
 
 .sidebar ul li a {
     text-decoration: none;
-    color: black;
+    color: gray;
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -259,7 +264,6 @@
     border-radius: 5px;
     margin-top: 20px;
     width: 80%;
-    margin-left: 250px;
    
 }
 
