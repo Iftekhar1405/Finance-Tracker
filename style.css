@@ -2,6 +2,79 @@
 body{
     font-family: 'Inter Tight',sans-serif;
 }
+.menu{
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+.sidebar .menu-title,
+.sidebar .general-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color:black;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a span {
+    margin-left: 10px;
+}
+
+.sidebar .general{
+    margin-top: 50px;
+    margin-left: 15px;
+}
+
+.sidebar .logout { 
+    margin-top: 180px;
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.sidebar .logout a {
+    text-decoration: none;
+    color: #3c8dbc;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.sidebar ul li a:hover {
+    transform: scale(1.1);
+    color:rgb(54, 11, 163);
+}
+.sidebar:hover{
+    transform: scale(1.1);
+    background-color: #e6f7ff;
+}
+.sidebar .logout a:hover{
+    transform: scale(1.1);
+    color:black;
+}
 .chart{
     display: flex;
     flex-direction: column;
