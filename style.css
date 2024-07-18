@@ -2,7 +2,7 @@
 * {
     font-family: "Inter Tight", sans-serif;
     box-sizing: border-box;
-    transition: transform 0.4s ease-in-out;
+    transition:0.4s ease-in-out;
 }
 main{
     margin-left: 280px;
@@ -238,6 +238,7 @@ main{
 .sidebar:hover{
     transform: scale(1.1);
     background-color: #e6f7ff;
+    margin-top: 30px;
 }
 .sidebar .logout a:hover{
     transform: scale(1.1);
