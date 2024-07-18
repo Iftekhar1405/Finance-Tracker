@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    .head{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 250px;
+        margin-bottom: 10px;
+        padding-bottom: 1px;
+        
+    }
+    .head a{
+        padding-top: 25px;
+        margin-right: 50px;
+        
+    }
+
+    .table-container {
+        max-height: 400px; /* Adjust as needed */
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 20px;
+        width: 80%;
+        margin-left: 250px;
+       
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        
+    }
+
+    th, td {
+        padding: 10px;
+        text-align: left;
+        /* border-bottom: 1px solid #ddd; */
+        
+    }
+
+    th {
+        background-color: #7eccf0;
+        text-align: center;
+    }
+
+    td {
+        background-color: #e6f7ff;
+        text-align: center;
+        font-weight: 500;
+        
+    }
+    
+    tr td:nth-of-type(3){
+        color:green;
+    }
+    tr td:nth-of-type(4){
+        color:red;
+    }
+
+    .table-container:hover{
+            transform: scale(1.03);
+        }
+    .head a:hover{
+        font-weight:600;
+    }
+</style>
+</head>
+<body>
+
+<div class = "transaction">
+    <div class = "head">
+        <h2>Monthly Transaction</h2>
+        <a href="">View All</a>
+    </div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Month</th>
+                <th>Monthly Income</th>
+                <th>Monthly Expenses</th>
+                <th>Monthly Savings</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>1</td>
+                <td>2024-07</td>
+                <td>Rs.+100000</td>
+                <td>Rs.-75000</td>
+                <td>Rs.15000</td>
+                <td>Success</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2024-08</td>
+                <td>Rs.+150000</td>
+                <td>Rs.-120000</td>
+                <td>Rs.300000</td>
+                <td>Success</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+</div>
+</body>
+</html>
