@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income vs Expenses Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .chart-container {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 150px;
+        }
+        .chart-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .chart {
+            position: relative;
+        }
+        .bar-chart {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 300px;
+            /* border-left: 2px solid #000;
+            border-bottom: 2px solid #000; */
+            padding-bottom: 10px;
+            position: relative;
+        }
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80px;
+        }
+        .bar {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+        }
+        .bar div {
+            width: 30px;
+        }
+        .income {
+            background-color: rgb(37, 134, 245);
+            border-radius: 5px;
+        }
+        .expenses {
+            background-color: rgb(99, 218, 242);
+            border-radius: 5px;
+        }
+        .income:hover{
+            transform: scale(1.1);
+        }
+        .expenses:hover{
+            transform: scale(1.1);
+        }
+        .bar-label {
+            margin-top: 10px;
+            
+        }
+        .y-axis-labels {
+            position: absolute;
+            left: -70px;
+            bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+        .y-axis-labels div {
+            margin-right: 5px;
+        }
+        .legend-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .legend-bar div {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        .legend-bar div span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .income-legend {
+            background-color: rgb(37, 134, 245);
+        }
+        .expenses-legend {
+            background-color: rgb(99, 218, 242);
+        }
+
+        .chart-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+       
+        .pie-charts {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 60px;
+        }
+        .pie-chart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            position: relative;
+        }
+        .pie-chart {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: relative;
+        }
+        .percentage-label {
+            position: absolute;
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
+            transform: translate(-50%, -50%);
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .legend div {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+        .legend div span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        
+        .jul { background-color: #4CAF50; }
+        .jun { background-color: #8BC34A; }
+        .may { background-color: #CDDC39; }
+        .apr { background-color: #FFEB3B; }
+        .mar { background-color: #FFC107; }
+        .feb { background-color: #FF9800; }
+        
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <div class="chart-title">Income v/s Expenses</div>
+        <div class="chart">
+            <div class="y-axis-labels">
+                <div>300,000</div>
+                <div>200,000</div>
+                <div>100,000</div>
+                <div>0</div>
+            </div>
+            <div class="bar-chart">
+                <div class="bar-group">
+                    <div class="bar">
+                        <div class="income" style="height: 250px;"></div>
+                        <div class="expenses" style="height: 150px;"></div>
+                    </div>
+                    <div class="bar-label">July</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar">
+                        <div class="income" style="height: 200px;"></div>
+                        <div class="expenses" style="height: 150px;"></div>
+                    </div>
+                    <div class="bar-label">Jun</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar">
+                        <div class="income" style="height: 220px;"></div>
+                        <div class="expenses" style="height: 130px;"></div>
+                    </div>
+                    <div class="bar-label">May</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar">
+                        <div class="income" style="height: 240px;"></div>
+                        <div class="expenses" style="height: 120px;"></div>
+                    </div>
+                    <div class="bar-label">Apr</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar">
+                        <div class="income" style="height: 280px;"></div>
+                        <div class="expenses" style="height: 180px;"></div>
+                    </div>
+                    <div class="bar-label">Mar</div>
+                </div>
+                <div class="bar-group">
+                    <div class="bar">
+                        <div class="income" style="height: 260px;"></div>
+                        <div class="expenses" style="height: 190px;"></div>
+                    </div>
+                    <div class="bar-label">Feb</div>
+                </div>
+            </div>
+        </div>
+        <div class="legend-bar">
+            <div><span class="income-legend"></span>Income</div>
+            <div><span class="expenses-legend"></span>Expenses</div>
+        </div>
+    </div>
+    <div class="chart-title">Income and Expenses</div>
+    <div class="pie-charts">
+        <!-- Income Pie Chart -->
+        <div class="pie-chart-container">
+            <div class="pie-chart" style="background: conic-gradient(
+                #4CAF50 0% 20%, 
+                #8BC34A 20% 38%, 
+                #CDDC39 38% 53%, 
+                #FFEB3B 53% 67%, 
+                #FFC107 67% 82%, 
+                #FF9800 82% 100%
+            );">
+                <div class="percentage-label" style="top: 25%; left: 30%;">20%</div>
+                <div class="percentage-label" style="top: 25%; left: 68%;">18%</div>
+                <div class="percentage-label" style="top: 55%; left: 80%;">15%</div>
+                <div class="percentage-label" style="top: 80%; left: 60%;">14%</div>
+                <div class="percentage-label" style="top: 77%; left: 30%;">15%</div>
+                <div class="percentage-label" style="top: 55%; left: 15%;">18%</div>
+            </div>
+            <div>Income</div>
+        </div>
+        <!-- Expenses Pie Chart -->
+        <div class="pie-chart-container">
+            <div class="pie-chart" style="background: conic-gradient(
+                #4CAF50 0% 22%, 
+                #8BC34A 22% 37%, 
+                #CDDC39 37% 52%, 
+                #FFEB3B 52% 65%, 
+                #FFC107 65% 79%, 
+                #FF9800 79% 100%
+            );">
+                <div class="percentage-label" style="top: 25%; left: 70%;">22%</div>
+                <div class="percentage-label" style="top: 60%; left: 80%;">15%</div>
+                <div class="percentage-label" style="top: 80%; left: 60%;">15%</div>
+                <div class="percentage-label" style="top: 80%; left: 30%;">13%</div>
+                <div class="percentage-label" style="top: 55%; left: 15%;">14%</div>
+                <div class="percentage-label" style="top: 25%; left: 30%;">21%</div>
+            </div>
+            <div>Expenses</div>
+        </div>
+    </div>
+    <div class="legend">
+        <div><span class="jul"></span>Jul</div>
+        <div><span class="jun"></span>Jun</div>
+        <div><span class="may"></span>May</div>
+        <div><span class="apr"></span>Apr</div>
+        <div><span class="mar"></span>Mar</div>
+        <div><span class="feb"></span>Feb</div>
+    </div>
+</body>
+</html>
