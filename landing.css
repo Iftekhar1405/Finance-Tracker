@@ -384,3 +384,78 @@ svg {
     padding: 50px;
     border: 8px solid rgb(54, 11, 163);
 }
+.Footer {
+    display: flex;
+    background-color: black;
+}
+
+.text {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 50px;
+    color: white;
+    font-size: 15px;
+    height: 400px;
+}
+
+.columns h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.columns p {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(95, 128, 143);
+}
+
+.columns p:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+.Logo-info {
+    margin-top: 60px;
+    width: 40%;
+    display: block;
+
+
+}
+
+.follow {
+    color: white;
+    margin-left: 220px;
+    font-size: 15px;
+}
+
+.Logo {
+    justify-content: space-around;
+    display: flex;
+    width: 50%;
+    margin-left: 200px;
+}
+
+.FinEase-footer {
+    display: flex;
+    background-color: black;
+}
+
+.FinEase-footer p {
+    color: white;
+    margin-left: 1100px;
+
+}
+
+.FinEase-footer img {
+    width: 100px;
+    height: 55px;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+
+}
+
+.footer-container {
+    display: block;
+}
