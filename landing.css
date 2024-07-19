@@ -24,6 +24,10 @@ nav {
     position: fixed;
     border-bottom: 5px solid rgb(54, 11, 163);
 }
+nav {
+    font-size: 100px;
+    color: rgb(54, 11, 163) ;
+}
 .cool-svg{
     display: flex;
     align-items: center;
