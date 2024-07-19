@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Inter Tight", sans-serif;
+    box-sizing: border-box;
+    transition: 0.4s ease-in-out;
+}
+
+body {
+    height: 300vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    padding: 0 30px;
+    width: 100vw;
+    padding-top: 20px;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
+    border-bottom: 5px solid rgb(54, 11, 163);
+}
+.cool-svg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cool-svg img{
+    height: 20vh;
+}
+
+.logo {
+    width: 100px;
+    border-radius: 20px;
+    transition: border-radius 0.3s;
+}
+
+.logo:hover {
+    border-radius: 0;
+}
+
+nav button,.log-in button{
+    height: 8vh;
+    width: 10vw;
+    border: 0;
+    margin: 10px;
+    font-weight: bold;
+    border-radius: 4vh;
+}
+
+nav button:nth-of-type(2),.log-in button:nth-of-type(2) {
+    background-color: rgb(54, 11, 163);
+    color: white;
+}
+
+button:hover {
+    border-radius: 0;
+}
+main{
+    margin: 100px;
+    margin-top: 300px;
+}
+
+.grow {
+    background-color: rgb(54, 11, 163);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+
+.red,
+.green,
+.blue {
+    height: 3vh;
+    width: 45vw;
+    margin: 5px;
+}
+
+.red {
+    background-color: rgb(255, 139, 139);
+    animation: grow 2s infinite;
+    transform-origin: 0;
+}
+
+.blue {
+    background-color: rgb(136, 136, 236);
+    animation: grow 2s infinite;
+    transform-origin: 100%;
+}
+
+.green {
+    background-color: rgb(94, 255, 94);
+    animation: grow 2s infinite;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45vw;
+}
+
+.text-container {
+    background-color:  rgb(54, 11, 163);
+    color: wheat;
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 30px;
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleX(0);
+    }
+
+    50% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+.color-container-v {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200vw;
+}
+
+.red-v,
+.blue-v,
+.green-v {
+    height: 45vh;
+    width: 20px;
+}
+
+.red-v {
+    background-color: rgb(255, 77, 77);
+    animation: grow-v 2s infinite;
+    transform-origin: 50% 100%;
+}
+
+.blue-v {
+    background-color: rgb(84, 84, 255);
+    animation: grow-v 2s infinite;
+    transform-origin: 50% 0;
+}
+
+.green-v {
+    background-color: rgb(1, 88, 1);
+    animation: grow-v 2s infinite;
+}
+
+@keyframes grow-v {
+    0% {
+        transform: scaleY(0);
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(0);
+    }
+}
+
+.chart {
+    width: 250vw;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line {
+    fill: none;
+    stroke-width: 10;
+    /* Increased stroke width */
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 4s infinite;
+}
+
+.line-red {
+    stroke: #f44336;
+    stroke-dasharray: 200;
+    animation: draw-down 4s infinite;
+}
+
+.line-blue {
+    stroke: #2196f3;
+    stroke-dasharray: 150;
+}
+
+.line-yellow {
+    stroke: #ffeb3b;
+    stroke-dasharray: 50;
+}
+
+.line-purple {
+    stroke: #9c27b0;
+    stroke-dasharray: 100;
+}
+
+@keyframes draw {
+
+    0%,
+    50% {
+        stroke-dashoffset: 100;
+    }
+
+    25% {
+        stroke-dashoffset: 0;
+    }
+
+    75% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes draw-down {
+
+    0%,
+    50% {
+        stroke-dashoffset: -200;
+    }
+
+    25% {
+        stroke-dashoffset: 0;
+    }
+
+    75% {
+        stroke-dashoffset: 0;
+    }
+}
+
+svg {
+    width: 20%;
+    height: 100%;
+}
+.pie-chart-container{
+    width: 200vw;
+}
+.pie-chart {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: rotate 6s infinite linear;
+}
+
+.slice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, 150px, 300px, 0);
+    transform: rotate(0deg);
+}
+
+.slice .pie {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    clip: rect(0, 150px, 300px, 0);
+    transform: rotate(0deg);
+}
+
+.slice:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.slice:nth-child(1) .pie {
+    background-color: #f44336;
+    transform: rotate(72deg);
+}
+
+.slice:nth-child(2) {
+    transform: rotate(72deg);
+}
+
+.slice:nth-child(2) .pie {
+    background-color: #ffeb3b;
+    transform: rotate(72deg);
+}
+
+.slice:nth-child(3) {
+    transform: rotate(144deg);
+}
+
+.slice:nth-child(3) .pie {
+    background-color: #4caf50;
+    transform: rotate(72deg);
+}
+
+.slice:nth-child(4) {
+    transform: rotate(216deg);
+}
+
+.slice:nth-child(4) .pie {
+    background-color: #2196f3;
+    transform: rotate(72deg);
+}
+
+.slice:nth-child(5) {
+    transform: rotate(288deg);
+}
+
+.slice:nth-child(5) .pie {
+    background-color: #9c27b0;
+    transform: rotate(72deg);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Customers img {
+    display: inline;
+    height: 80px;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.Customers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 20px;
+    padding: 30px;
+    background-color: rgb(54, 11, 163);
+    border-radius: 30px;
+    gap: 30px;
+}
+
+.imgdiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.Customers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, .45);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+    backdrop-filter: blur(100px);
+}
+
+.log-in{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    border: 8px solid rgb(54, 11, 163);
+}
