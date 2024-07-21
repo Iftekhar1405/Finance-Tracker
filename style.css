@@ -134,7 +134,7 @@ main{
 
 .nav-container {
     display: flex;
-    background-color: white;
+    background-color:linear-gradient(to right, #6A82FB, #690bb6);
     max-width: 1500px;
     justify-content: space-between;
     align-items: center;
@@ -218,7 +218,7 @@ main{
 .sidebar {
     width: 250px;
     height: 100vh;
-    background-color: #fff;
+    background-color: linear-gradient(to right, #6A82FB, #690bb6);
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -420,10 +420,16 @@ tr td:nth-of-type(4){
 .income {
     background-color: rgb(37, 134, 245);
     border-radius: 5px;
+    animation: grow 5s forwards;
 }
 .expenses {
     background-color: rgb(99, 218, 242);
     border-radius: 5px;
+    animation: grow 5s forwards;
+}
+@keyframes grow {
+    0% { height: 0; }
+    100% { height: var(--height); }
 }
 .income:hover{
     transform: scale(1.1);
