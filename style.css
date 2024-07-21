@@ -21,6 +21,7 @@ main{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    transform: translateX(-740px);
 }
 
 .hamburger {
@@ -148,6 +149,7 @@ main{
     flex-grow: 5;
     /* background-color: yellow; */
     justify-content: flex-end;
+    transform: translateX(-300px);
 }
 
 .user-info {
@@ -665,6 +667,9 @@ tr td:nth-of-type(4){
     .text{
         display: none;
         
+    }
+    .dashboard,.nav-items{
+        transform: translateX(0);
     }
     .Logo-info{
         display: flex;
