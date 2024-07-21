@@ -6,6 +6,10 @@
     transition: 0.4s ease-in-out;
 }
 
+button>a {
+    text-decoration: none;
+}
+
 body {
     height: 300vh;
     background-color: lightblue;
