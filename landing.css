@@ -8,7 +8,7 @@
 
 body {
     height: 300vh;
-    background-color: rgb(145, 130, 184);
+    background-color: lightblue;
     max-width: max-content;
 }
 
@@ -520,4 +520,17 @@ svg {
 
 .footer-container {
     display: block;
+}
+
+@media (width <= 750px) {
+    nav button{
+        width: 80px;
+        height: 40px;
+    }
+    .cool-svg{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    
 }
