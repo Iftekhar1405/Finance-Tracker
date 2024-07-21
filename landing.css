@@ -10,6 +10,7 @@ body {
     height: 300vh;
     background-color: lightblue;
     max-width: max-content;
+    max-width: 1500px;
 }
 
 nav {
@@ -523,14 +524,147 @@ svg {
 }
 
 @media (width <= 750px) {
-    nav button{
-        width: 80px;
-        height: 40px;
+    main{
+        margin: 15px;
+        margin-top: 150px;
+    }
+    nav button,.log-in button{
+        width: 90px;
+        height: 45px;
     }
     .cool-svg{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .cool-svg img{
+        height: 100px;
+        transform: translateY(0);
+    }
+    .cool-svg div{
+        flex-direction: row;
+        justify-content: space-between;
+
+        
+    }
+    .cool-svg span,.Customers img,.Customers h4,.comment,.cards h1,.cards span{
+        transform: translateY(0);
+    }
+    .Customers{
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        
+    }
+    .Customers-container,.text-container{
+        filter: none;
+    }
+    .brands-logo{
+        grid-template-columns: 1fr 1fr;
+    }
+    .brands-logo img {
+        height: 50px;
+    }
+    .cards:nth-of-type(1n){
+        flex-direction: column;
+    }
+    .cards:nth-of-type(2n){
+        flex-direction: column-reverse;
+    }
+    .color-container,.color-container-v,.chart,.pie-chart-container{
+        width: 90vw;
+    }
+    .chart{
+        height: 15vh;
+    }
+    .red,.blue,.green{
+        width: 100%;
+    }
+    .log-in{
+        flex-direction: column;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    .text{
+        display: none;
+        
+    }
+    .Logo-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .follow{
+        width: 100%;
+    }
+    .Logo{
+        width: 100%;
+    }
+
+}
+@media ( 750px <= width <= 1050px) {
+    main{
+        margin: 15px;
+        margin-top: 150px;
+    }
+    nav button,.log-in button{
+        width: 90px;
+        height: 45px;
+    }
+    .cool-svg{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .cool-svg img{
+        height: 100px;
+        transform: translateY(0);
     }
     
+    .cool-svg span,.Customers img,.Customers h4,.comment,.cards h1,.cards span{
+        transform: translateY(0);
+    }
+    .Customers{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .Customers-container,.text-container{
+        filter: none;
+    }
+    .brands-logo{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .brands-logo img {
+        height: 80px;
+    }
+    .cards:nth-of-type(1n){
+        flex-direction: column;
+    }
+    .cards:nth-of-type(2n){
+        flex-direction: column-reverse;
+    }
+    .color-container,.color-container-v,.chart,.pie-chart-container{
+        width: 90vw;
+    }
+    .chart{
+        height: 15vh;
+    }
+    .red,.blue,.green{
+        width: 100%;
+    }
+    .log-in{
+        flex-direction: column;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+    .text{
+        display: none;
+        
+    }
+    
+
 }
