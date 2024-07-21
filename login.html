@@ -151,6 +151,10 @@
         input::placeholder {
             color: grey;
         }
+
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -173,7 +177,12 @@
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
 
-        <button>Log In</button>
+        <button>
+            <a style="color: white;" href="./index.html">
+                Log In
+            </a>
+
+        </button>
         <div class="social">
             <div class="go" style="background-color: purple;"><i class="fab fa-google"></i> Google</div>
             <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
