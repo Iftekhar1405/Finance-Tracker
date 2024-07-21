@@ -224,7 +224,7 @@ main{
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
-    overflow-y: scroll;
+    background-color: white;
 }
 
 .sidebar .menu-title,
@@ -585,6 +585,7 @@ tr td:nth-of-type(4){
     display: flex;
     width: 50%;
     margin-left: 200px;
+    background-color: white;
 }
 
 .FinEase-footer {
