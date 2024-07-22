@@ -81,7 +81,7 @@ nav button,.log-in button{
     border-radius: 4vh;
 }
 
-nav button:nth-of-type(2),.log-in button:nth-of-type(2) {
+.Sign-Up,.log-in button:nth-of-type(2) {
     background-color: rgb(54, 11, 163);
     color: white;
 }
