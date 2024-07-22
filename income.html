@@ -34,18 +34,19 @@
         }
 
         .container img {
-            width: 100px;
             height: 60px;
             border-radius: 5px;
         }
 
         header {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
+            padding: 10px ;
             border-bottom: 1px solid #ddd;
-            background-color: rgb(113, 30, 202);
+            background-color: darkblue;
+            margin: 0;
         }
 
         header h1 {
@@ -66,7 +67,7 @@
         nav ul li a {
             text-decoration: none;
             color: black;
-            font-size: 20px;
+            font-size: 12px;
             font-weight: 500;
         }
 
@@ -170,7 +171,28 @@
         footer p {
             margin: 0;
         }
-    </style>>
+        @media (width <= 1200) {
+            .container{
+                overflow: scroll;
+            }
+            nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            font-weight: 500;
+        }
+            header{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            header img{
+                display: block;
+            }
+        
+            
+        }
+    </style>
 </head>
 
 <body>

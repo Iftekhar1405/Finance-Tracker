@@ -30,6 +30,7 @@ nav {
     position: fixed;
     border-bottom: 5px solid rgb(54, 11, 163);
     left: 0;
+    max-width: 1500px ;
 }
 .cool-svg{
     display: flex;
